@@ -2,7 +2,7 @@
   <main v-if="!loading">
     <DataTitle :text="title" :dataDate="dataDate" />
     <DataBoxes :stats="stats" />
-    <CountrySelect :countries="countries" />
+    <CountrySelect :countries="countries" @get-country="getCountryData"/>
   </main>
 
   <main class="flex flex-col align-center justify-center text-center" v-else>
@@ -47,7 +47,7 @@ export default {
     const data = await this.fetchCovidData();
 
     this.dataDate = data.Date;
-    this.stats = data.Global;
+    this.status = data.Global;
     this.countries = data.Countries;
     this.loading = false;
   },
