@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+
 export default {
   name: "CountrySelect",
   props: ["countries"],
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     onChange() {
-      const country = countries.find((item) => item.ID === selected.value);
+      const country = this.countries.find((item) => item.ID === this.selected);
       this.$emit("get-country", country);
     },
   },

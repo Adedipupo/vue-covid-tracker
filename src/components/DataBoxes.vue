@@ -33,8 +33,8 @@
 <script>
 export default {
   name: "DataBoxes",
-  props: ["stats"],
-  setup () {
+  props: ['stats'],
+  data () {
     return {
       numberWithCommas (x) {
         return x.toString()
