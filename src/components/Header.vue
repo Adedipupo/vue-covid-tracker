@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="text-center bg-blue-800 text-white p-4">
       <div>Covid-19 Tracker</div>
   </header>
 </template>
