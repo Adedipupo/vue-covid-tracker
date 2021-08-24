@@ -31,7 +31,11 @@ export default {
   },
   async created(){
     const data = await this.fetchCovidData();
-    console.log(data );
+    
+    this.dataDate = data.Date
+    this.stat = data.Global
+    this.countries = data.Countries
+    this.loading = false
   }
 }
 </script>
