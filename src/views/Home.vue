@@ -1,6 +1,6 @@
 <template>
   <main v-if="!loading">
-    Show Data
+    <DataTitle :text="title" :dataDate="dataDate" />
   </main>
 
   <main class="flex flex-col align-center justify-center text-center" v-else>
@@ -13,11 +13,12 @@
 
 <script>
 // @ is an alias to /src
+import DataTitle from '@/components/DataTitle'
 
 export default {
   name: 'Home',
   components: {
-    
+    DataTitle
   },
   data(){
     return {
